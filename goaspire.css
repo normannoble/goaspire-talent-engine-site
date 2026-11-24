@@ -1,0 +1,81 @@
+/* GoAspire skin over the Talent Engine site (#47). Loaded after site.css.
+   GoAspire system (goaspire.ai, 2026-11-24): Inter, bold and tight; brand purple #5A2A82;
+   white header with a purple solid and a purple outline button; purple gradient hero panel
+   with white type; pastel cards; the four WorkStyle colours (Relating #D6436B, Reasoning #3EA0D2,
+   Doing #4EB98F, Creating #F4B942); green uppercase eyebrows. The Talent Engine story is unchanged. */
+:root{
+  --ga-purple:#5a2a82; --ga-purple-2:#6e3a9a; --ga-deep:#3d1a5c; --ga-green:#4eb98f;
+  --ga-pink:#d6436b; --ga-blue:#3ea0d2; --ga-yellow:#f4b942;
+  --display:"Inter",system-ui,sans-serif; --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --bg:#fff; --ink:#171717; --soft:#555a66; --line:#e6e6ea; --blue:#5a2a82;
+  --c1:#5a2a82; --c2:#4eb98f; --c3:#3ea0d2; --c4:#f4b942; --c5:#d6436b;
+  --p1:#f4eef9; --p2:#ecf7f2; --p3:#eaf4fb; --p4:#fdf8e8; --p5:#fbedf1; --p6:#f5f5f5;
+}
+h1,h2,h3{letter-spacing:-.035em}
+.hero h1,.problem h2,.question h2,.step h2,.change h2,.offer h2,.close h2{font-weight:700}
+
+/* header: white, purple wordmark, purple button */
+.bar{background:rgba(255,255,255,.95)}
+.logo.ch-goaspire{gap:10px}
+.logo.ch-goaspire img.wm{width:28px;height:28px;display:block}
+.logo.ch-goaspire .ga-word{font:600 20px/1 var(--sans);letter-spacing:-.02em;color:var(--ga-purple)}
+.logo.ch-goaspire .pw{font:500 12px/1 var(--sans);color:var(--soft);padding-left:12px;margin-left:2px;border-left:1px solid var(--line)}
+.logo.ch-goaspire .pw b{font-weight:600;color:var(--ink)}
+.bar nav a.here{color:var(--ga-purple);font-weight:600}
+.pill-btn{background:var(--ga-purple);border:1px solid var(--ga-purple);color:#fff!important;border-radius:6px;font:600 14px/1 var(--sans);padding:10px 15px;box-shadow:none}
+
+/* buttons */
+.btn{background:var(--ga-purple);border-radius:6px;font:600 16px/1 var(--sans);padding:17px 24px;box-shadow:0 12px 26px -14px rgba(90,42,130,.7)}
+.btn.ghost{background:#fff;color:var(--ga-purple);border:1.5px solid var(--ga-purple);box-shadow:none}
+
+/* purple heroes, as on goaspire.ai */
+.hero,.hero.cr,.hero.pf,.hero.hw{background:linear-gradient(135deg,var(--ga-purple) 0%,var(--ga-purple-2) 100%);color:#fff}
+.hero h1 span,.hero h1 .blue{color:#f6d27a!important}
+.hero .lines{color:#ece4f4}
+.hero .btn{background:#fff;color:var(--ga-purple);box-shadow:0 14px 30px -16px rgba(0,0,0,.5)}
+.hero .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.7)}
+.hero .ring{border-color:rgba(255,255,255,.22)}
+.hero .tile,.hero .core{color:var(--ink);box-shadow:0 30px 60px -28px rgba(20,0,40,.6)}
+.hero .core{background:#fff}
+.hero .qn{color:var(--ink)}
+.hero .qn::before{background:rgba(255,255,255,.45)}
+.hero .note{color:#f6d27a}
+.hero .spark{color:var(--ga-yellow)}
+
+/* story bands: white and light grey, pastel cards like goaspire.ai's stat cards */
+.problem,.change{background:#fff}
+.question{background:#f5f5f5}
+.offer{background:var(--p1)}
+.steps3 li{border-radius:12px;border:1px solid var(--line);box-shadow:0 18px 36px -30px rgba(90,42,130,.45)}
+.win{border-radius:12px}
+.win .chrome i:nth-child(1){background:#ff5f57}.win .chrome i:nth-child(2){background:#febc2e}.win .chrome i:nth-child(3){background:#28c840}
+.mockcol .note,.question .note{color:var(--ga-purple)}
+.cross a,.more{color:var(--ga-purple)}
+.byline .av{background:conic-gradient(var(--ga-pink) 0 25%,var(--ga-yellow) 0 50%,var(--ga-blue) 0 75%,var(--ga-green) 0)}
+
+/* purple close, light footer */
+.close{background:linear-gradient(135deg,var(--ga-deep) 0%,var(--ga-purple) 100%);color:#fff}
+.close p{color:#e6dcef}
+.close h2 span{color:#f6d27a!important}
+.close .cross a{color:#f6d27a}
+.close .chipf{box-shadow:0 12px 30px -16px rgba(0,0,0,.5)}
+.close .byline{background:#fff;border:0;color:var(--ink)}
+.close .byline p{color:var(--soft)}
+.close .byline p b{color:var(--ink)}
+footer{background:#f5f5f5;color:#6b6f7a;padding:34px 0 40px;margin:0}
+
+/* GoAspire close card */
+.kt-close .av{background:#fff!important;border:1px solid var(--line)}
+.kt-close .av::after{content:none}
+.kt-close .av img{width:32px;height:32px}
+.kt-close a{color:var(--ga-purple);font-weight:600;text-decoration:none;white-space:nowrap}
+
+@media (max-width:960px){.logo.ch-goaspire .pw{display:none}}
+@media (max-width:560px){.logo.ch-goaspire .ga-word{font-size:17px}.logo.ch-goaspire img.wm{width:24px;height:24px}.bar nav{gap:9px;font-size:12px;letter-spacing:-.01em}}
+@media (max-width:360px){.logo.ch-goaspire .ga-word{display:none}.bar nav{gap:7px;font-size:11px}}
+
+/* contrast fixes: white button on the purple close; Creating yellow is too light for text */
+.close .btn{background:#fff;color:var(--ga-purple);box-shadow:0 14px 30px -16px rgba(0,0,0,.5)}
+.k4 .who,.k4 .t small,.k4 .more,.k4 .n,.mockcol.k4 .note,.k4 .mockcol .note{color:#a87100}
+.k4.step .who,.step.k4 .who{color:#a87100}
+@media (max-width:560px){.logo.ch-goaspire .ga-word{display:none}.bar nav a{white-space:nowrap}}
